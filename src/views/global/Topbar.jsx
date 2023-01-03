@@ -9,14 +9,14 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
 import SearchIcon from '@mui/icons-material/Search'
 
-const TopBar = () => {
+const Topbar = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
   const colorMode = useContext(ColorModeContext)
 
   return (
     <Box display='flex' justifyContent='space-between' p={2}>
-      {/** Search bar */}
+      {/* SEARCH BAR */}
       <Box
         display='flex'
         backgroundColor={colors.primary[400]}
@@ -28,20 +28,20 @@ const TopBar = () => {
         </IconButton>
       </Box>
 
-      {/** Right side icons */}
+      {/* ICONS */}
       <Box display='flex'>
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === 'dark' ? (
-            <LightModeOutlinedIcon />
-          ) : (
             <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon />
           )}
         </IconButton>
         <IconButton>
-          <SettingsOutlinedIcon />
+          <NotificationsOutlinedIcon />
         </IconButton>
         <IconButton>
-          <NotificationsOutlinedIcon />
+          <SettingsOutlinedIcon />
         </IconButton>
         <IconButton>
           <PersonOutlinedIcon />
@@ -51,4 +51,4 @@ const TopBar = () => {
   )
 }
 
-export default TopBar
+export default Topbar
