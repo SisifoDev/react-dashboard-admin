@@ -4,6 +4,7 @@ import TopBar from './views/global/Topbar'
 import { Route, Routes } from 'react-router-dom'
 import Sidebar from './views/global/Sidebar'
 import Dashboard from './views/dashboard'
+
 // import Team from './views/team'
 // import Invoices from './views/invoices'
 // import Contacts from './views/contacts'
@@ -25,6 +26,7 @@ function App() {
           <Sidebar />
           <main className='content'>
             <TopBar />
+
             <Routes>
               <Route path='/' element={<Dashboard />} />
               {/* <Route path='/team' element={<Team />} />
